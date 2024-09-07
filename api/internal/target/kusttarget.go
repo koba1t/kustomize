@@ -329,7 +329,7 @@ func (kt *KustTarget) configureExternalGenerators() (
 	if err != nil {
 		return nil, err
 	}
-	return kt.pLdr.LoadGenerators(kt.ldr, kt.validator, ra.ResMap())
+	return kt.pLdr.LoadGenerators(kt.ldr, kt.validator, ra.ResMap(), kt)
 }
 
 func (kt *KustTarget) runTransformers(ra *accumulator.ResAccumulator) error {
